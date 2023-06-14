@@ -1,0 +1,31 @@
+:root {
+    --main-bg-color: #D84282;
+    --default-margin: 24px auto;
+}
+
+body {
+    margin: var(--default-margin);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#menu {
+    width: 100px;
+    height: calc(3 * 12px);
+    border-top: 12px solid var(--main-bg-color);
+    border-bottom: 12px solid var(--main-bg-color);
+    position: relative;
+}
+
+div::after {
+    content: "";
+    display: block;
+    border-top: 12px solid var(--main-bg-color);
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 100px;
+    height: 12px;
+    transform: translate(50%,50%);
+}
